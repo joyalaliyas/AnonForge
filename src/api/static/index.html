@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeText Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="ambient-shape shape-one"></div>
+  <div class="ambient-shape shape-two"></div>
+
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Privacy-Preserving AI</p>
+      <h1>SafeText Studio</h1>
+      <p class="subtitle">Detect sensitive entities, preserve meaning, and generate synthetic-safe text instantly.</p>
+    </header>
+
+    <section class="card input-card">
+      <div class="card-head">
+        <h2>Input</h2>
+        <p>Paste sensitive text and run the two-agent pipeline.</p>
+      </div>
+
+      <label for="sourceText">Text</label>
+      <textarea id="sourceText" rows="7" placeholder="Rahul from Kochi works at Infosys and feels stressed."></textarea>
+
+      <div class="actions">
+        <label for="locale">Locale</label>
+        <input id="locale" type="text" value="en-IN" />
+        <button id="runButton" type="button">Run Pipeline</button>
+      </div>
+      <p id="status" class="status idle">Ready.</p>
+    </section>
+
+    <section class="card input-card csv-card">
+      <div class="card-head">
+        <h2>CSV Conversion</h2>
+        <p>Upload a CSV, choose a text column or use auto-detection, and download a synthetic-safe output file.</p>
+      </div>
+
+      <label for="csvFile">CSV File</label>
+      <input id="csvFile" type="file" accept=".csv,text/csv" />
+
+      <div class="actions csv-actions">
+        <label for="csvTextColumn">Text Column</label>
+        <input id="csvTextColumn" type="text" value="auto" />
+        <label for="csvLocale">Locale</label>
+        <input id="csvLocale" type="text" value="en-IN" />
+        <button id="runCsvButton" type="button">Convert CSV</button>
+      </div>
+      <p id="csvStatus" class="status idle">No file processed yet.</p>
+    </section>
+
+    <section class="results-grid">
+      <article class="card reveal">
+        <h3>Original</h3>
+        <pre id="originalView" class="panel empty">No run yet.</pre>
+      </article>
+
+      <article class="card reveal">
+        <h3>Highlighted</h3>
+        <pre id="highlightedView" class="panel empty">No run yet.</pre>
+      </article>
+
+      <article class="card reveal">
+        <h3>Synthetic Output</h3>
+        <pre id="syntheticView" class="panel empty">No run yet.</pre>
+      </article>
+
+      <article class="card reveal wide">
+        <h3>Detected Entities</h3>
+        <div id="entitiesView" class="entity-list empty">No entities yet.</div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
