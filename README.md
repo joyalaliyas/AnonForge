@@ -192,23 +192,5 @@ Run test suite:
 pytest -q
 ```
 
-The tests mock OpenAI paths so CI remains deterministic and does not require live API calls.
+The tests mock  paths so CI remains deterministic and does not require live API calls.
 
-## Deployment summary
-
-Recommended deployment stack:
-
-- Ubuntu server/VPS
-- `uvicorn` as app server
-- `systemd` service
-- Nginx reverse proxy
-- TLS with Certbot
-
-See deployment section in project guidance or create a deployment runbook from this README.
-
-## Security notes
-
-- Never commit `.env`.
-- Rotate API keys if exposed.
-- Review CSV output before sharing externally.
-- Consider adding authentication if exposing this publicly.
