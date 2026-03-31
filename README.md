@@ -8,7 +8,7 @@ It is designed for teams that need to use LLM workflows on sensitive records wit
 
 1. Detects sensitive entities such as person names, locations, companies, emails, phones, and IDs.
 2. Classifies scenario context (for example employee stress/support/health/general).
-3. Generates synthetic replacements using OpenAI models.
+3. Generates synthetic replacements using AI models.
 4. Produces transformed text for single input and CSV batch processing.
 5. Provides a web interface and API endpoints.
 
@@ -16,14 +16,14 @@ It is designed for teams that need to use LLM workflows on sensitive records wit
 
 ### Agent 1: Detection + Understanding
 
-- Uses OpenAI to extract entities in strict JSON format.
+- Uses AI to extract entities in strict JSON format.
 - Resolves entity spans back to source text.
 - Classifies context label using OpenAI.
 - Returns highlighted text with labels.
 
 ### Agent 2: Safe Generation
 
-- Uses OpenAI to generate synthetic replacements for each detected entity.
+- Uses AI to generate synthetic replacements for each detected entity.
 - Applies replacements to produce transformed text.
 - Runs output validation checks to reduce leakage risk.
 
@@ -64,7 +64,7 @@ tests/
 ## Requirements
 
 - Python 3.11+ (works with newer versions too)
-- OpenAI API key
+- AI API key
 
 ## Local setup
 
@@ -89,27 +89,6 @@ pip install -r requirements.txt
 uvicorn src.api.main:app --reload
 ```
 
-## Environment variables
-
-Create `.env` in project root:
-
-```env
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_ENTITY_MODEL=gpt-4o-mini
-OPENAI_CONTEXT_MODEL=gpt-4o-mini
-OPENAI_GENERATION_MODEL=gpt-4o-mini
-```
-
-Notes:
-
-- `OPENAI_API_KEY` is required.
-- `.env` is ignored by git.
-- Use `.env.example` as template.
-
-## Web app usage
-
-- UI: http://127.0.0.1:8000/
-- API docs: http://127.0.0.1:8000/docs
 
 ### Single text flow
 
