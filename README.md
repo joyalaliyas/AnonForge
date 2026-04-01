@@ -1,7 +1,7 @@
 # AnonForge
 
 ## Proof of AI
-![AnonForge Working Flow](src/proof/working.png)
+![AnonForge Working Flow](src/proof/Screenshot 2026-04-01 064212.png)
 
 ## Overview
 
