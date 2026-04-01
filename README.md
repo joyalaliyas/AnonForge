@@ -4,6 +4,16 @@ AnonForge is a privacy-preserving AI pipeline that detects sensitive entities in
 
 It is designed for teams that need to use LLM workflows on sensitive records without exposing real personal or organizational data.
 
+## Working and Dashboard
+
+### Working Flow
+
+![AnonForge Working Flow](src/proof/working.png)
+
+### Dashboard
+
+![AnonForge Dashboard](src/proof/dashboard.png)
+
 ## Problem Statement
 
 Organizations in HR, healthcare, legal services, and government hold high-value but highly sensitive data such as employee records, patient details, case notes, and therapy logs. This data is private by nature and tightly governed by compliance requirements.
