@@ -92,6 +92,8 @@ Organizations submit confidential raw data to AnonForge and receive context-rich
 - Uses AI to generate synthetic replacements for each detected entity.
 - Applies replacements to produce transformed text.
 - Runs output validation checks to reduce leakage risk.
+![Screenshot1.png]()
+![Screenshot2.png]()
 
 ### Pipeline Orchestrator
 
