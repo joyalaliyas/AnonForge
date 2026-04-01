@@ -228,14 +228,3 @@ Returns downloadable CSV.
 
 - LLM processing failures are returned as HTTP 503 with detailed `detail` messages.
 - CSV rows are marked with row-level `status` and `error` to make failures auditable.
-
-## Testing
-
-Run test suite:
-
-```bash
-pytest -q
-```
-
-The tests mock  paths so CI remains deterministic and does not require live API calls.
-
