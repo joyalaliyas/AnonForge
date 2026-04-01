@@ -1,18 +1,16 @@
 # AnonForge
 
-AnonForge is a privacy-preserving AI pipeline that detects sensitive entities in text and transforms them into synthetic-safe alternatives while preserving context and meaning.
-
-It is designed for teams that need to use LLM workflows on sensitive records without exposing real personal or organizational data.
-
-## Working and Dashboard
-
-### Working Flow
+## Proof of AI
 
 ![AnonForge Working Flow](src/proof/working.png)
 
-### Dashboard
-
 ![AnonForge Dashboard](src/proof/dashboard.png)
+
+## Overview
+
+AnonForge is a privacy-preserving AI pipeline that detects sensitive entities in text and transforms them into synthetic-safe alternatives while preserving context and meaning.
+
+It is designed for teams that need to use LLM workflows on sensitive records without exposing real personal or organizational data.
 
 ## Problem Statement
 
